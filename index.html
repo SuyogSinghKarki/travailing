@@ -1,13 +1,417 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om parwat</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adi Kailash & Om Parvat Tourism Circuit | Uttarakhand</title>
+  <meta name="description" content="A complete travel guide to the Adi Kailash & Om Parvat tourism circuit in Uttarakhand, India — routes, permits, homestays, helicopter packages, best time, tips, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            primary: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa',
+              500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a'
+            },
+            accent: '#0ea5e9'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2, 6, 23, 0.12)'
+          },
+          maxWidth: { prose: '72ch' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Simple fade-in */
+    .reveal { opacity: 0; transform: translateY(8px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    /* Hero background gradient overlay */
+    .hero-bg { background: linear-gradient(180deg, rgba(2,6,23,.75) 0%, rgba(2,6,23,.6) 45%, rgba(2,6,23,.85) 100%), url('hero-placeholder.jpg') center/cover no-repeat; }
+    /* Replace hero-placeholder.jpg with your photo (2560×1440 suggested). */
+  </style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adi Kailash & Om Parvat Tourism Circuit" />
+  <meta property="og:description" content="Plan your sacred Himalayan journey — routes, permits, stays, helicopters, best time, and tips." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero-placeholder.jpg" />
+  <meta property="og:url" content="https://example.com/adi-kailash-om-parvat" />
+  <!-- JSON-LD: TouristDestination + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    "name": "Adi Kailash & Om Parvat Tourism Circuit",
+    "description": "Routes, permits, homestays, helicopter packages, best time to visit, and cultural tips for the Adi Kailash & Om Parvat circuit in Uttarakhand, India.",
+    "touristType": ["Pilgrim", "Trekker", "Cultural Traveler"],
+    "geo": {"@type":"GeoCoordinates","latitude":"30.2","longitude":"80.9"},
+    "address": {"@type": "PostalAddress", "addressRegion": "Uttarakhand", "addressCountry": "IN"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Do I need an Inner Line Permit?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Adi Kailash–Om Parvat region is a protected border zone. Carry valid ID, photos, and medical fitness documents."}},
+      {"@type":"Question","name":"Best months to visit?","acceptedAnswer":{"@type":"Answer","text":"April–June and September–October for clear skies and safer roads."}},
+      {"@type":"Question","name":"Are helicopter darshan packages available?","acceptedAnswer":{"@type":"Answer","text":"Yes. Seasonal aerial darshan packages (often 4N/5D) include breakfast, local hospitality, and last-mile ATV transfers."}}
+    ]
+  }
+  </script>
 </head>
-<body>
-    <h1>Hello welcome to Aadikailash!</h1>
-    
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-2 font-extrabold tracking-tight text-primary-700">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l3.5 6 6.5.9-4.7 4.6 1.1 6.5L12 17l-6 3.1 1.1-6.5L2.4 8.9 8.5 8 12 2z" stroke="currentColor" stroke-width="1.3"/>
+          </svg>
+          <span>Adi Kailash • Om Parvat</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#overview" class="hover:text-primary-700">Overview</a>
+          <a href="#route" class="hover:text-primary-700">Route & Access</a>
+          <a href="#permits" class="hover:text-primary-700">Permits</a>
+          <a href="#offerings" class="hover:text-primary-700">Tourism</a>
+          <a href="#best-time" class="hover:text-primary-700">Best Time</a>
+          <a href="#developments" class="hover:text-primary-700">Updates</a>
+          <a href="#tips" class="hover:text-primary-700">Tips</a>
+          <a href="#contact" class="hover:text-primary-700">Contact</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300 px-3 py-2 text-sm">Menu</button>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <nav class="grid gap-2 text-sm font-medium">
+          <a href="#overview" class="px-3 py-2 rounded-lg hover:bg-slate-100">Overview</a>
+          <a href="#route" class="px-3 py-2 rounded-lg hover:bg-slate-100">Route & Access</a>
+          <a href="#permits" class="px-3 py-2 rounded-lg hover:bg-slate-100">Permits</a>
+          <a href="#offerings" class="px-3 py-2 rounded-lg hover:bg-slate-100">Tourism Offerings</a>
+          <a href="#best-time" class="px-3 py-2 rounded-lg hover:bg-slate-100">Best Time</a>
+          <a href="#developments" class="px-3 py-2 rounded-lg hover:bg-slate-100">Recent Updates</a>
+          <a href="#tips" class="px-3 py-2 rounded-lg hover:bg-slate-100">Cultural & Practical Tips</a>
+          <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-slate-100">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero-bg text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-28">
+      <div class="max-w-3xl">
+        <span class="inline-block bg-white/10 border border-white/20 px-3 py-1 rounded-full text-xs tracking-wide">Uttarakhand • Kumaon Himalaya</span>
+        <h1 class="mt-4 text-4xl md:text-6xl font-extrabold leading-tight">Adi Kailash & Om Parvat<br class="hidden sm:block"/> Tourism Circuit</h1>
+        <p class="mt-4 text-lg md:text-xl text-slate-100">Plan your sacred Himalayan journey — routes, permits, homestays, helicopter darshan, best season, and on-ground tips for a smooth pilgrimage.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#permits" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 active:scale-[.99] text-white px-5 py-3 rounded-2xl shadow-soft text-sm font-semibold">
+            <span>Get Permits Info</span>
+          </a>
+          <a href="#route" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-5 py-3 rounded-2xl border border-white/20 text-sm font-semibold">
+            <span>See Route Map</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section id="overview" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Overview</h2>
+          <p class="mt-4 max-w-prose text-slate-700">Nestled close to the Indo–Tibetan border in the Kumaon Himalaya of Uttarakhand, <strong>Adi Kailash</strong> (also called <em>Chhota Kailash</em>) and <strong>Om Parvat</strong> are among India’s most revered high‑altitude pilgrimages. Adi Kailash is venerated as a terrestrial reflection of Mount Kailash — the seat of Lord Shiva — while Om Parvat is famed for the sacred snow‑pattern that forms the Devanagari symbol <strong>“ॐ”</strong> on its face.</p>
+          <ul class="mt-6 space-y-3 text-slate-700 list-disc pl-5">
+            <li><strong>Adi Kailash</strong> (approx. 6,191 m): ringed by sacred spots like <em>Parvati Sarovar</em> and <em>Gauri Kund</em> near Jolingkong.</li>
+            <li><strong>Om Parvat</strong> (approx. 6,191 m): viewed near <em>Nabhidhang</em> on the approach to <em>Lipulekh Pass</em>; famed for the natural “ॐ”.</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="bg-white rounded-2xl shadow-soft p-6">
+            <h3 class="font-bold text-lg">Quick Facts</h3>
+            <dl class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div>
+                <dt class="text-slate-500">Region</dt>
+                <dd class="font-semibold">Kumaon, Uttarakhand, India</dd>
+              </div>
+              <div>
+                <dt class="text-slate-500">Nearest Rail / Air</dt>
+                <dd class="font-semibold">Kathgodam / Pantnagar</dd>
+              </div>
+              <div>
+                <dt class="text-slate-500">Base</dt>
+                <dd class="font-semibold">Dharchula → Gunji</dd>
+              </div>
+              <div>
+                <dt class="text-slate-500">Permit</dt>
+                <dd class="font-semibold">Inner Line Permit (ILP) mandatory</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Route & Access -->
+  <section id="route" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-prose">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Route & Access</h2>
+        <p class="mt-4 text-slate-700">Typical approach is from <strong>Kathgodam (rail)</strong> or <strong>Pantnagar (air)</strong> into the Kumaon hills via <strong>Almora → Pithoragarh → Dharchula → Gunji</strong>. From Gunji the trail branches:</p>
+      </div>
+      <div class="mt-8 grid lg:grid-cols-2 gap-6">
+        <article class="reveal bg-slate-100 rounded-2xl p-6">
+          <h3 class="font-bold text-xl">Adi Kailash Branch</h3>
+          <p class="mt-2 text-slate-700">Gunji → Kuti Valley → Kuti → Jolingkong → Adi Kailash (Parvati Sarovar & Gauri Kund).</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Roads/ATVs now reach close to Jolingkong; remaining is a short, scenic walk.</li>
+            <li>Views of the snow pyramid of Adi Kailash with the tranquil Parvati Sarovar.</li>
+          </ul>
+        </article>
+        <article class="reveal bg-slate-100 rounded-2xl p-6">
+          <h3 class="font-bold text-xl">Om Parvat Branch</h3>
+          <p class="mt-2 text-slate-700">Gunji → Nabhidhang → Om Parvat viewpoint (towards Lipulekh Pass).</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Clear mornings best to witness the natural <strong>“ॐ”</strong> snow insignia.</li>
+            <li>Short roadside walks to vantage points; carry layers—winds can be sharp.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="reveal mt-8 bg-white rounded-2xl shadow-soft p-6">
+        <h3 class="font-bold text-lg">Driving & Trekking Snapshot</h3>
+        <div class="grid md:grid-cols-3 gap-6 mt-4 text-sm">
+          <div>
+            <h4 class="font-semibold">Drive</h4>
+            <p class="text-slate-700">Good blacktop to Dharchula; BRO improvements allow jeeps/ATVs deeper into Kuti Valley, reducing trek times.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold">Trek</h4>
+            <p class="text-slate-700">Expect short acclimatization walks (3–7 km segments) around Jolingkong and viewpoints near Nabhidhang.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold">Medical</h4>
+            <p class="text-slate-700">High altitude (3,500–4,900 m). Plan staged ascents; carry basic AMS meds if prescribed and keep hydrated.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Permits & Process -->
+  <section id="permits" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Inner Line Permit (ILP)</h2>
+          <p class="mt-4 text-slate-700 max-w-prose">The circuit lies in a sensitive border zone, so an <strong>ILP is mandatory</strong>. Carry a government photo ID, passport‑size photos, and a basic <strong>medical fitness certificate</strong>. Apply via the competent authority (Pithoragarh district) or through authorised operators. Keep soft and hard copies with you.</p>
+          <ul class="mt-4 space-y-2 text-slate-700 list-disc pl-5">
+            <li>Submit IDs, photos, medical certificate; foreigners may need additional clearances.</li>
+            <li>Permits are checked at Dharchula and onward check‑posts (Gunji/Nabhidhang).</li>
+            <li>Travel insurance and emergency contact details are strongly advised.</li>
+          </ul>
+        </div>
+        <div class="reveal bg-white rounded-2xl shadow-soft p-6">
+          <h3 class="font-bold text-lg">Recent Accessibility Enhancements</h3>
+          <p class="mt-2 text-slate-700">Border road upgrades have shortened earlier multi‑day treks into approachable drives with short, scenic walks. Seasonal helicopter darshan further improves access for seniors and time‑bound pilgrims.</p>
+          <div class="mt-4 grid sm:grid-cols-2 gap-4 text-sm">
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+              <h4 class="font-semibold">Check‑posts</h4>
+              <p>Dharchula • Gunji • Nabhidhang</p>
+            </div>
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+              <h4 class="font-semibold">Docs to Carry</h4>
+              <p>ID, Photos, Medical Fitness, Permits (physical + digital)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tourism Offerings -->
+  <section id="offerings" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2 reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Tourism Offerings</h2>
+          <article class="mt-6 bg-slate-100 rounded-2xl p-6">
+            <h3 class="font-bold text-xl">Helicopter Darshan Packages</h3>
+            <p class="mt-2 text-slate-700">Curated aerial‑plus‑ground experiences—often <strong>4N/5D</strong>—using medium‑lift helicopters (e.g., MI‑17) with breakfast, village hospitality, and last‑mile ATV transfers. Operated seasonally under <em>High Value • Low Volume</em> guidelines and the <em>Vibrant Village</em> focus on border hamlets.</p>
+            <ul class="mt-4 space-y-2 text-sm list-disc pl-5 text-slate-700">
+              <li>Aerial darshan of Adi Kailash and Om Parvat (weather‑permitting).</li>
+              <li>Homestay overnights in Gunji/Kuti/Nabhi/Nepalchu; cultural evenings.</li>
+              <li>On‑ground support: permits assistance, medical checks, ATVs for rough sections.</li>
+            </ul>
+          </article>
+          <article class="mt-6 bg-slate-100 rounded-2xl p-6">
+            <h3 class="font-bold text-xl">Village Homestays</h3>
+            <p class="mt-2 text-slate-700">Stay with Kumaoni families in <strong>Gunji</strong>, <strong>Kuti</strong>, <strong>Nabhi</strong>, and <strong>Nepalchu</strong>. Expect warm hosts, woolen bedding, hearty mountain meals, and stories of ancient routes linking India, Nepal, and Tibet.</p>
+          </article>
+        </div>
+        <aside class="reveal bg-white rounded-2xl shadow-soft p-6">
+          <h3 class="font-bold text-lg">At a Glance</h3>
+          <ul class="mt-3 space-y-3 text-sm text-slate-700">
+            <li>Category: Pilgrimage • Scenic Drive • Soft Trek</li>
+            <li>Altitude Window: ~3,500–4,900 m</li>
+            <li>Power/Connectivity: Patchy beyond Dharchula; carry power banks</li>
+            <li>Payment: Keep cash for remote villages</li>
+            <li>Safety: Weather swings fast; keep spare day in itinerary</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Time -->
+  <section id="best-time" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-prose">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Best Time to Visit</h2>
+        <p class="mt-4 text-slate-700">Choose clear‑weather windows: <strong>April–June</strong> (spring–early summer) and <strong>September–October</strong> (post‑monsoon). Avoid peak monsoon (July–August) due to landslide risk; winters (Nov–Mar) bring heavy snow and closures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Developments & Events -->
+  <section id="developments" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Recent Developments & Events</h2>
+          <ul class="mt-4 space-y-3 text-slate-700 list-disc pl-5">
+            <li><strong>Resumption of Kailash Mansarovar Yatra (Indian sector):</strong> Enhanced roads and medical posts have enabled structured pilgrim batches to include <em>Adi Kailash</em> darshan without crossing into Tibet.</li>
+            <li><strong>Infrastructure:</strong> BRO road widening, bridges, and check‑posts improved access and safety; basic health facilities added at key halts.</li>
+            <li><strong>High‑Altitude Ultra‑Marathon (Adi Kailash Parikrama) – Nov 2025:</strong> A planned sacred‑trail endurance run with likely 21 km, 42 km, and 72 km categories around the greater Jolingkong–Kuti valley region, designed to boost adventure tourism and local livelihoods.</li>
+          </ul>
+        </div>
+        <aside class="reveal bg-slate-100 rounded-2xl p-6">
+          <h3 class="font-bold text-lg">Why it matters</h3>
+          <p class="mt-2 text-slate-700">The focus on <em>High Value • Low Volume</em> keeps the ecosystem protected while bringing sustainable income to remote border villages via homestays, guides, and logistics.</p>
+          <div class="mt-4 grid sm:grid-cols-2 gap-4 text-sm">
+            <div class="bg-white rounded-xl border p-4">
+              <h4 class="font-semibold">Local Impact</h4>
+              <p>Jobs for drivers, porters, cooks, and homestay hosts.</p>
+            </div>
+            <div class="bg-white rounded-xl border p-4">
+              <h4 class="font-semibold">Visitor Benefit</h4>
+              <p>Safer roads, medical support, and curated experiences.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cultural & Practical Tips -->
+  <section id="tips" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2 reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Cultural & Practical Tips</h2>
+          <ul class="mt-4 space-y-3 text-slate-700 list-disc pl-5">
+            <li><strong>Sacred Waters:</strong> Near Jolingkong, visit <em>Parvati Sarovar</em> and <em>Gauri Kund</em>; maintain silence and avoid littering around the lakes.</li>
+            <li><strong>Altitude & Acclimatization:</strong> Ascend gradually; keep a spare acclimatization day at Dharchula or Gunji. Watch for AMS symptoms.</li>
+            <li><strong>Eco‑conscious:</strong> Carry reusable bottles and bags, pack out trash, and stick to marked trails.</li>
+            <li><strong>Cuisine:</strong> Try <em>bhatt ki churkani</em>, <em>madua roti</em>, seasonal greens, and herbal teas at homestays.</li>
+            <li><strong>Connectivity:</strong> Intermittent beyond Dharchula; BSNL/Jio may work in pockets. Download offline maps.</li>
+            <li><strong>What to Pack:</strong> Thermal layers, wind‑proof jacket, rain shell (even in summer), sturdy shoes, sun protection, basic medicines, ID/permits (digital + printed).</li>
+          </ul>
+        </div>
+        <aside class="reveal bg-white rounded-2xl shadow-soft p-6">
+          <h3 class="font-bold text-lg">Quick Planner</h3>
+          <ol class="mt-3 space-y-3 text-sm text-slate-700 list-decimal pl-5">
+            <li>Choose a weather window (Apr–Jun or Sep–Oct).</li>
+            <li>Arrange ILP and basic medical certificate.</li>
+            <li>Book homestays (Gunji/Kuti/Nabhi) or helicopter slots.</li>
+            <li>Plan staged travel: Kathgodam/Pantnagar → Almora → Pithoragarh → Dharchula → Gunji.</li>
+            <li>Keep a buffer day for weather or road conditions.</li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal bg-slate-100 rounded-2xl p-8">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-3xl font-extrabold tracking-tight">Plan Your Darshan</h2>
+            <p class="mt-3 text-slate-700">Looking for permits guidance, a homestay shortlist, or seasonal helicopter updates? Drop your details and we’ll share a ready‑to‑use checklist.</p>
+          </div>
+          <form class="grid gap-3">
+            <div class="grid gap-2">
+              <label class="text-sm font-medium">Name</label>
+              <input class="w-full rounded-xl border border-slate-300 px-4 py-2.5" placeholder="Your name" required />
+            </div>
+            <div class="grid gap-2">
+              <label class="text-sm font-medium">Email</label>
+              <input type="email" class="w-full rounded-xl border border-slate-300 px-4 py-2.5" placeholder="you@example.com" required />
+            </div>
+            <div class="grid gap-2">
+              <label class="text-sm font-medium">Travel Month</label>
+              <select class="w-full rounded-xl border border-slate-300 px-4 py-2.5">
+                <option>April</option><option>May</option><option>June</option>
+                <option>September</option><option>October</option>
+              </select>
+            </div>
+            <button type="button" onclick="alert('Thanks! We will get back to you with a checklist.');" class="mt-2 inline-flex justify-center items-center rounded-2xl bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 font-semibold">
+              Request Checklist
+            </button>
+            <p class="text-xs text-slate-500">*Demo form – connect to your backend/email service.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-600">© <span id="year"></span> Adi Kailash • Om Parvat Travel Guide. All rights reserved.</p>
+        <div class="text-xs text-slate-500">Made with ❤ in Uttarakhand | Sustainable Travel • Respect Local Culture</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
